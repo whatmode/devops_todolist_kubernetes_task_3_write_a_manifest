@@ -5,17 +5,17 @@ metadata:
   namespace: todoapp
 spec:
   containers:
-     - name: todoapp
-       image: whatmodeprog/todoapp:3.0.0
-       ports:
-        - containerPort: 8080
-       livenessProbe:
+    - name: todoapp
+      image: whatmodeprog/todoapp:3.0.0
+      ports:
+      - containerPort: 8080
+      livenessProbe:
         httpGet:
           path: /api/health
           port: 8080
         initialDelaySeconds: 10
         periodSeconds: 5
-       readinessProbe:
+      readinessProbe:
         httpGet:
           path: /api/ready
           port: 8080
