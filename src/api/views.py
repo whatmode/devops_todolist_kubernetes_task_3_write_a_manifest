@@ -73,5 +73,3 @@ def ready(request):
         return HttpResponse("READY", content_type="text/plain", status=200)
     except Exception as e:
         return HttpResponse("NOT READY", content_type="text/plain", status=503)
-
-
