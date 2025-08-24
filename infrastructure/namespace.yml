@@ -1,22 +1,4 @@
 apiVersion: v1
-kind: Pod
+kind: Namespace
 metadata:
   name: todoapp
-  labels:
-    app: todoapp
-spec:
-  containers:
-    - name: todoapp
-      image: whatmodeprog/todoapp:3.0.0
-      ports:
-        - containerPort: 8080
-      livenessProbe:
-        httpGet:
-          path: /health
-          port: 8080
-        initialDelaySeconds: 10
-        periodSeconds: 5
-      readinessProbe:
-        httpGet:
-          
-          port: 8080
